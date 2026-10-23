@@ -1,0 +1,47 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "netAmount": "#900",
+      "creditNeeded": "#700",
+      "creditGap": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "availableCredit": "600"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "creditGap": "#100"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "prepaid": "901"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "discount": "1001"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "availableCredit": "700"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  }
+]
